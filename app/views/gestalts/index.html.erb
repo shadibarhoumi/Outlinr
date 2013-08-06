@@ -1,0 +1,13 @@
+<h1>Open Gestalt!</h1>
+
+<%= form_for @gestalt, url: {action: 'create'}, remote: true, html: {placeholder: 'title'} do |f| %>
+	<%= f.text_field :title %>
+<% end %>
+
+<ul class='gestalts'>
+	<% @gestalts.each do |gestalt| %>
+		<li>
+			<%= link_to gestalt.title, gestalt %>
+		</li>
+	<% end %>
+</ul>
