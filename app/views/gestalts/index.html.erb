@@ -5,9 +5,5 @@
 <% end %>
 
 <ul class='gestalts'>
-	<% @gestalts.each do |gestalt| %>
-		<li>
-			<%= link_to gestalt.title, gestalt %>
-		</li>
-	<% end %>
+	<%= render 'gestalt_list' %>
 </ul>

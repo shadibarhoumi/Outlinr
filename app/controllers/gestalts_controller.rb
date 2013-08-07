@@ -10,5 +10,6 @@ class GestaltsController < ApplicationController
 
 	def create
 		@gestalt = Gestalt.create(params[:gestalt])
+		@gestalts = Gestalt.order('created_at DESC')
 	end
 end
